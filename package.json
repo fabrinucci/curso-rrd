@@ -1,5 +1,5 @@
 {
-  "name": "curso-intro-react",
+  "name": "curso-rrd",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -40,5 +40,6 @@
   },
   "devDependencies": {
     "gh-pages": "^3.2.3"
-  }
+  },
+  "homepage": "https://github.com/fabrinucci/curso-rrd"
 }
