@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/fabrinucci/curso-rrd/static/css/main.38fcb0e6.css",
-    "main.js": "/fabrinucci/curso-rrd/static/js/main.00c59c4d.js",
-    "index.html": "/fabrinucci/curso-rrd/index.html",
-    "static/media/delete.svg": "/fabrinucci/curso-rrd/static/media/delete.331149da222541bc87c25bf8d775a070.svg",
-    "static/media/edit.svg": "/fabrinucci/curso-rrd/static/media/edit.569363b1fad8252af1f4f6e04345ba2e.svg",
-    "static/media/check.svg": "/fabrinucci/curso-rrd/static/media/check.fa4fb594b16385306a04b9c87c0feb55.svg",
-    "main.38fcb0e6.css.map": "/fabrinucci/curso-rrd/static/css/main.38fcb0e6.css.map",
-    "main.00c59c4d.js.map": "/fabrinucci/curso-rrd/static/js/main.00c59c4d.js.map"
+    "main.css": "/curso-rrd/static/css/main.38fcb0e6.css",
+    "main.js": "/curso-rrd/static/js/main.be6a7fe4.js",
+    "index.html": "/curso-rrd/index.html",
+    "static/media/delete.svg": "/curso-rrd/static/media/delete.331149da222541bc87c25bf8d775a070.svg",
+    "static/media/edit.svg": "/curso-rrd/static/media/edit.569363b1fad8252af1f4f6e04345ba2e.svg",
+    "static/media/check.svg": "/curso-rrd/static/media/check.fa4fb594b16385306a04b9c87c0feb55.svg",
+    "main.38fcb0e6.css.map": "/curso-rrd/static/css/main.38fcb0e6.css.map",
+    "main.be6a7fe4.js.map": "/curso-rrd/static/js/main.be6a7fe4.js.map"
   },
   "entrypoints": [
     "static/css/main.38fcb0e6.css",
-    "static/js/main.00c59c4d.js"
+    "static/js/main.be6a7fe4.js"
   ]
 }
