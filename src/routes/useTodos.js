@@ -8,11 +8,10 @@ function useTodos() {
     sincronizeItem: sincronizeTodos,
     loading,
     error,
-  } = useLocalStorage('TODOS_V1', []);
+  } = useLocalStorage('TODOS_V2', []);
   const [searchValue, setSearchValue] = React.useState('');
-  const [openModal, setOpenModal] = React.useState(false);
 
-  const completedTodos = todos.filter(todo => !!todo.completed).length;
+  const completedTodos = todos.filter((todo) => !!todo.completed).length;
   const totalTodos = todos.length;
 
   let searchedTodos = [];
@@ -20,7 +19,7 @@ function useTodos() {
   if (!searchValue.length >= 1) {
     searchedTodos = todos;
   } else {
-    searchedTodos = todos.filter(todo => {
+    searchedTodos = todos.filter((todo) => {
       const todoText = todo.text.toLowerCase();
       const searchText = searchValue.toLowerCase();
       return todoText.includes(searchText);
@@ -28,28 +27,42 @@ function useTodos() {
   }
 
   const addTodo = (text) => {
+    const id = newTodoId();
     const newTodos = [...todos];
     newTodos.push({
+      id,
       completed: false,
       text,
     });
     saveTodos(newTodos);
   };
 
-  const completeTodo = (text) => {
-    const todoIndex = todos.findIndex(todo => todo.text === text);
+  const getTodo = (id) => {
+    const todo = todos.find((todo) => todo.id === id);
+    return todo;
+  };
+
+  const completeTodo = (id) => {
+    const todoIndex = todos.findIndex((todo) => todo.id === id);
     const newTodos = [...todos];
     newTodos[todoIndex].completed = true;
     saveTodos(newTodos);
   };
 
-  const deleteTodo = (text) => {
-    const todoIndex = todos.findIndex(todo => todo.text === text);
+  const editTodo = (id, newText) => {
+    const todoIndex = todos.findIndex((todo) => todo.id === id);
+    const newTodos = [...todos];
+    newTodos[todoIndex].text = newText;
+    saveTodos(newTodos);
+  };
+
+  const deleteTodo = (id) => {
+    const todoIndex = todos.findIndex((todo) => todo.id === id);
     const newTodos = [...todos];
     newTodos.splice(todoIndex, 1);
     saveTodos(newTodos);
   };
-  
+
   const state = {
     loading,
     error,
@@ -57,19 +70,23 @@ function useTodos() {
     completedTodos,
     searchValue,
     searchedTodos,
-    openModal,
+    getTodo,
   };
-  
+
   const stateUpdaters = {
     setSearchValue,
     addTodo,
     completeTodo,
+    editTodo,
     deleteTodo,
-    setOpenModal,
     sincronizeTodos,
   };
 
   return { state, stateUpdaters };
+}
+
+function newTodoId() {
+  return Date.now().toString(15);
 }
 
 export { useTodos };

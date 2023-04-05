@@ -1,5 +1,5 @@
 .CreateTodoButton {
-  background-color: #61DAFA;
+  background-color: #2018b9;
   box-shadow: 0px 5px 25px rgba(97, 218, 250, 0.5);
   border: none;
   border-radius: 50%;
@@ -9,7 +9,7 @@
   bottom: 24px;
   right: 24px;
   font-weight: bold;
-  color: #FAFAFA;
+  color: #fafafa;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -17,10 +17,19 @@
   width: 64px;
 
   transform: rotate(0);
-  transition: .3s ease;
+  transition: 0.3s ease;
   z-index: 1;
 }
 
 .CreateTodoButton:hover {
   transform: rotate(224deg);
+}
+
+.disabled {
+  opacity: 50%;
+  cursor: auto;
+}
+
+.disabled:hover {
+  transform: none;
 }

@@ -16,7 +16,8 @@
 }
 
 .LoadingTodo-completeIcon,
-.LoadingTodo-deleteIcon {
+.LoadingTodo-deleteIcon,
+.LoadingTodo-editIcon {
   border-radius: 50px;
   height: 48px;
   width: 48px;
@@ -27,16 +28,26 @@
   left: 12px;
 }
 
+.LoadingTodo-editIcon {
+  position: absolute;
+  top: 10px;
+  right: 64px;
+}
 .LoadingTodo-deleteIcon {
   position: absolute;
-  top: -24px;
-  right: 0;
+  top: 10px;
+  right: 12px;
 }
 
 .LoadingTodo-container,
 .LoadingTodo-completeIcon,
-.LoadingTodo-deleteIcon {
-  background: linear-gradient(90deg, rgba(250,250,250,1), rgb(200, 199, 199));
+.LoadingTodo-deleteIcon,
+.LoadingTodo-editIcon {
+  background: linear-gradient(
+    90deg,
+    rgba(250, 250, 250, 1),
+    rgb(200, 199, 199)
+  );
   background-size: 400% 400%;
   animation: loadingAnimation 3s ease-in-out infinite;
 }
